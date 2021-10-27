@@ -1,6 +1,5 @@
 package com.chat.java;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.net.Socket;
 
@@ -14,7 +13,6 @@ public class Client {
 		System.out.println("[Client] 서버 접속 완료");
 		
 		new ClientUI();
-		
 		
 	}
 }

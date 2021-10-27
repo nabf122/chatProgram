@@ -50,13 +50,13 @@ public class Program extends Thread{
 					continue;
 				}
 							
-			// list 안에 클라이언트 정보가 담겨있음
-			for(int i = 0; i<userList.size(); i++) { 
-				os = userList.get(i).getOutputStream();
-				pw = new PrintWriter(os, true);
-				// 클라이언트에게 메세지 발송
-				pw.println(name + " : " + readValue); 
-			}			
+				// list 안에 클라이언트 정보가 담겨있음
+				for(int i = 0; i<userList.size(); i++) { 
+					os = userList.get(i).getOutputStream();
+					pw = new PrintWriter(os, true);
+					// 클라이언트에게 메세지 발송
+					pw.println(name + " : " + readValue); 
+				}			
 			}
 		} catch(IOException e) {
 			e.printStackTrace();

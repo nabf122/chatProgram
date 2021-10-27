@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
 
 import javax.swing.JButton;
@@ -48,6 +49,8 @@ public class ClientUI  extends JFrame{
 		btn1.setBounds(370, 570, 60, 30);
 		this.add(btn1);
 		
+		this.setVisible(true);
+		
 		// 전송 버튼 클릭 이벤트
 		btn1.addActionListener(new ActionListener() {
 			
@@ -55,15 +58,11 @@ public class ClientUI  extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				if(e.getSource()== btn1) {
-					textArea.setText(textField.getText());
-					String message = textField.getText();
-					pw.println(message);
+					
+					// 텍스트 필드 초기화
 					textField.setText("");
 				}
 			}
 		});
-
-		this.setVisible(true);
-		
 	}
 }
